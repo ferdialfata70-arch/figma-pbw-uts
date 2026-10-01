@@ -1,0 +1,1031 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AutoCare | Booking Servis Kendaraan</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">A</div>
+        <div>
+          <h2>Auto<span>Care</span></h2>
+          <small>Service Center</small>
+        </div>
+      </div>
+
+      <div class="menu-title">MENU UTAMA</div>
+
+      <nav>
+        <a href="#" class="menu active" onclick="showPage('home')"> <span>⌂</span> Beranda </a>
+
+        <a href="#" class="menu" onclick="showPage('layanan')"> <span>⚙</span> Layanan </a>
+
+        <a href="#" class="menu" onclick="showPage('booking')"> <span>▣</span> Booking Servis </a>
+
+        <a href="#" class="menu" onclick="showPage('riwayat')"> <span>◷</span> Riwayat </a>
+      </nav>
+
+      <div class="menu-title">MANAJEMEN</div>
+
+      <nav>
+        <a href="#" class="menu" onclick="showPage('admin')"> <span>▦</span> Admin </a>
+
+        <a href="#" class="menu" onclick="showPage('paket')"> <span>◆</span> Paket Servis </a>
+
+        <a href="#" class="menu" onclick="showPage('mekanik')"> <span>🔧</span> Mekanik </a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="help-box">
+          <div class="help-icon">?</div>
+          <div>
+            <b>Butuh bantuan?</b>
+            <small>Hubungi AutoCare</small>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+      <!-- TOPBAR -->
+      <header class="topbar">
+        <div>
+          <p class="welcome">Selamat datang kembali 👋</p>
+          <h3>AutoCare Service Center</h3>
+        </div>
+
+        <div class="top-actions">
+          <button class="notification" onclick="showNotification()">
+            ♢
+            <i></i>
+          </button>
+
+          <div class="profile">
+            <div class="avatar">F</div>
+            <div>
+              <b>Customer</b>
+              <small>Pelanggan</small>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- ================= HOME ================= -->
+      <section id="home" class="page active">
+        <div class="hero">
+          <div class="hero-content">
+            <div class="hero-label">
+              <span></span>
+              AUTOCARE SERVICE CENTER
+            </div>
+
+            <h1>
+              Your Car.<br />
+              <strong>Our Passion.</strong>
+            </h1>
+
+            <p>Solusi mudah untuk booking servis kendaraan. Pilih layanan, tentukan jadwal, dan pantau proses servis kendaraanmu dalam satu tempat.</p>
+
+            <div class="hero-buttons">
+              <button class="btn-main" onclick="showPage('booking')">
+                Booking Servis
+                <span>→</span>
+              </button>
+
+              <button class="btn-light" onclick="showPage('layanan')">Lihat Layanan</button>
+            </div>
+
+            <div class="hero-mini">
+              <div>
+                <strong>500+</strong>
+                <span>Kendaraan</span>
+              </div>
+
+              <div>
+                <strong>15+</strong>
+                <span>Mekanik</span>
+              </div>
+
+              <div>
+                <strong>4.9</strong>
+                <span>Rating</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="hero-glow"></div>
+
+            <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1200&q=85" alt="Mobil AutoCare" />
+
+            <div class="floating-card">
+              <div class="floating-icon">✓</div>
+
+              <div>
+                <small>STATUS SERVIS</small>
+                <b>Kendaraan siap digunakan</b>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- QUICK BOOKING -->
+        <div class="quick-section">
+          <div>
+            <small>PERAWATAN KENDARAAN</small>
+            <h2>Siap melakukan servis?</h2>
+            <p>Booking sekarang dan pilih jadwal yang paling sesuai.</p>
+          </div>
+
+          <button class="btn-main" onclick="showPage('booking')">Buat Booking →</button>
+        </div>
+
+        <!-- SERVICE PREVIEW -->
+        <div class="section-heading">
+          <div>
+            <span>LAYANAN KAMI</span>
+            <h2>Servis yang kamu butuhkan</h2>
+          </div>
+
+          <button class="text-button" onclick="showPage('layanan')">Lihat semua →</button>
+        </div>
+
+        <div class="home-services">
+          <div class="home-service">
+            <div class="service-icon blue">🔧</div>
+
+            <div>
+              <h3>Servis Berkala</h3>
+              <p>Pemeriksaan kendaraan secara menyeluruh.</p>
+              <strong>Rp150.000</strong>
+            </div>
+          </div>
+
+          <div class="home-service">
+            <div class="service-icon purple">⚙</div>
+
+            <div>
+              <h3>Ganti Oli</h3>
+              <p>Penggantian oli dan pengecekan mesin.</p>
+              <strong>Rp100.000</strong>
+            </div>
+          </div>
+
+          <div class="home-service">
+            <div class="service-icon orange">⚡</div>
+
+            <div>
+              <h3>Tune Up</h3>
+              <p>Optimalkan kembali performa kendaraan.</p>
+              <strong>Rp250.000</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= LAYANAN ================= -->
+      <section id="layanan" class="page">
+        <div class="page-title">
+          <span>OUR SERVICES</span>
+
+          <h1>Paket Servis Kendaraan</h1>
+
+          <p>Pilih paket perawatan sesuai kebutuhan kendaraanmu.</p>
+        </div>
+
+        <div class="service-grid">
+          <div class="service-card">
+            <div class="service-image blue-bg">🔧</div>
+
+            <div class="service-content">
+              <div class="service-tag">POPULAR</div>
+
+              <h2>Servis Ringan</h2>
+
+              <p>Pemeriksaan dasar kendaraan untuk menjaga performa tetap optimal.</p>
+
+              <div class="service-list">
+                <span>✓ Pemeriksaan mesin</span>
+                <span>✓ Pemeriksaan rem</span>
+                <span>✓ Pemeriksaan oli</span>
+                <span>✓ Pemeriksaan ban</span>
+              </div>
+
+              <div class="service-price">
+                <div>
+                  <small>Mulai dari</small>
+                  <strong>Rp150.000</strong>
+                </div>
+
+                <button onclick="selectService('Servis Ringan')">Booking →</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-card featured-service">
+            <div class="popular-badge">REKOMENDASI</div>
+
+            <div class="service-image dark-bg">🛠</div>
+
+            <div class="service-content">
+              <div class="service-tag">BEST VALUE</div>
+
+              <h2>Servis Lengkap</h2>
+
+              <p>Pemeriksaan menyeluruh untuk memastikan kendaraan dalam kondisi terbaik.</p>
+
+              <div class="service-list">
+                <span>✓ Pemeriksaan mesin</span>
+                <span>✓ Sistem pengereman</span>
+                <span>✓ Aki & kelistrikan</span>
+                <span>✓ Suspensi kendaraan</span>
+              </div>
+
+              <div class="service-price">
+                <div>
+                  <small>Mulai dari</small>
+                  <strong>Rp350.000</strong>
+                </div>
+
+                <button onclick="selectService('Servis Lengkap')">Booking →</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-image purple-bg">⚙</div>
+
+            <div class="service-content">
+              <div class="service-tag">ROUTINE</div>
+
+              <h2>Ganti Oli</h2>
+
+              <p>Penggantian oli untuk menjaga mesin tetap bersih dan bekerja dengan baik.</p>
+
+              <div class="service-list">
+                <span>✓ Ganti oli mesin</span>
+                <span>✓ Cek kondisi oli</span>
+                <span>✓ Cek kebocoran</span>
+                <span>✓ Pemeriksaan mesin</span>
+              </div>
+
+              <div class="service-price">
+                <div>
+                  <small>Mulai dari</small>
+                  <strong>Rp100.000</strong>
+                </div>
+
+                <button onclick="selectService('Ganti Oli')">Booking →</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="service-image orange-bg">⚡</div>
+
+            <div class="service-content">
+              <div class="service-tag">PERFORMANCE</div>
+
+              <h2>Tune Up</h2>
+
+              <p>Perawatan mesin untuk membantu mengembalikan performa kendaraan.</p>
+
+              <div class="service-list">
+                <span>✓ Pemeriksaan busi</span>
+                <span>✓ Pemeriksaan filter</span>
+                <span>✓ Pemeriksaan mesin</span>
+                <span>✓ Sistem bahan bakar</span>
+              </div>
+
+              <div class="service-price">
+                <div>
+                  <small>Mulai dari</small>
+                  <strong>Rp250.000</strong>
+                </div>
+
+                <button onclick="selectService('Tune Up')">Booking →</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= BOOKING ================= -->
+      <section id="booking" class="page">
+        <div class="page-title">
+          <span>BOOKING SERVIS</span>
+
+          <h1>Buat Jadwal Servis</h1>
+
+          <p>Lengkapi data berikut untuk membuat booking.</p>
+        </div>
+
+        <div class="booking-layout">
+          <div class="booking-form">
+            <form id="bookingForm">
+              <div class="form-section">
+                <div class="form-heading">
+                  <div>01</div>
+                  <h3>Data Pelanggan</h3>
+                </div>
+
+                <div class="input-grid">
+                  <div class="input-box">
+                    <label>Nama Lengkap</label>
+                    <input type="text" id="nama" placeholder="Masukkan nama lengkap" />
+                  </div>
+
+                  <div class="input-box">
+                    <label>Nomor HP</label>
+                    <input type="text" id="hp" placeholder="08xxxxxxxxxx" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-section">
+                <div class="form-heading">
+                  <div>02</div>
+                  <h3>Data Kendaraan</h3>
+                </div>
+
+                <div class="input-grid">
+                  <div class="input-box">
+                    <label>Nomor Plat</label>
+                    <input type="text" id="plat" placeholder="BL 1234 AB" />
+                  </div>
+
+                  <div class="input-box">
+                    <label>Merk & Tipe Kendaraan</label>
+                    <input type="text" id="kendaraan" placeholder="Toyota Avanza" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-section">
+                <div class="form-heading">
+                  <div>03</div>
+                  <h3>Jadwal Servis</h3>
+                </div>
+
+                <div class="input-grid">
+                  <div class="input-box">
+                    <label>Jenis Servis</label>
+
+                    <select id="jenis">
+                      <option value="">Pilih jenis servis</option>
+
+                      <option>Servis Ringan</option>
+                      <option>Servis Lengkap</option>
+                      <option>Ganti Oli</option>
+                      <option>Tune Up</option>
+                    </select>
+                  </div>
+
+                  <div class="input-box">
+                    <label>Tanggal</label>
+
+                    <input type="date" id="tanggal" />
+                  </div>
+
+                  <div class="input-box">
+                    <label>Jam</label>
+
+                    <select id="jam">
+                      <option value="">Pilih jam</option>
+
+                      <option>09:00</option>
+                      <option>10:00</option>
+                      <option>11:00</option>
+                      <option>13:00</option>
+                      <option>14:00</option>
+                      <option>15:00</option>
+                      <option>16:00</option>
+                    </select>
+                  </div>
+
+                  <div class="input-box">
+                    <label>Keluhan</label>
+
+                    <input type="text" id="keluhan" placeholder="Contoh: mesin terasa bergetar" />
+                  </div>
+                </div>
+              </div>
+
+              <button class="submit-booking" type="submit">
+                Konfirmasi Booking
+                <span>→</span>
+              </button>
+            </form>
+          </div>
+
+          <div class="booking-info">
+            <div class="booking-info-top">
+              <span>INFO BOOKING</span>
+
+              <h2>Kenapa servis di AutoCare?</h2>
+            </div>
+
+            <div class="info-item">
+              <div>✓</div>
+              <p>Jadwal servis lebih teratur dan tidak perlu menunggu terlalu lama.</p>
+            </div>
+
+            <div class="info-item">
+              <div>✓</div>
+              <p>Kendaraan ditangani oleh mekanik berpengalaman.</p>
+            </div>
+
+            <div class="info-item">
+              <div>✓</div>
+              <p>Status servis dapat dipantau dengan mudah.</p>
+            </div>
+
+            <div class="booking-contact">
+              <small>JAM OPERASIONAL</small>
+              <strong>Senin - Sabtu</strong>
+              <span>08.00 - 17.00 WIB</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= RIWAYAT ================= -->
+      <section id="riwayat" class="page">
+        <div class="page-title">
+          <span>MY SERVICE</span>
+
+          <h1>Riwayat Servis</h1>
+
+          <p>Pantau seluruh booking dan servis kendaraanmu.</p>
+        </div>
+
+        <div class="history-summary">
+          <div>
+            <small>Total Servis</small>
+            <strong>12</strong>
+          </div>
+
+          <div>
+            <small>Sedang Diproses</small>
+            <strong>1</strong>
+          </div>
+
+          <div>
+            <small>Selesai</small>
+            <strong>10</strong>
+          </div>
+        </div>
+
+        <div class="history-list">
+          <div class="history-item">
+            <div class="history-icon">🔧</div>
+
+            <div class="history-main">
+              <div class="history-title">
+                <h3>Servis Ringan</h3>
+                <span class="badge pending">Pending</span>
+              </div>
+
+              <p>Toyota Avanza • BL 1234 AB</p>
+
+              <small> 05 Oktober 2026 • 10:00 WIB </small>
+            </div>
+
+            <button onclick="showPage('detail')">Detail →</button>
+          </div>
+
+          <div class="history-item">
+            <div class="history-icon purple-icon">⚙</div>
+
+            <div class="history-main">
+              <div class="history-title">
+                <h3>Ganti Oli</h3>
+                <span class="badge process">Diproses</span>
+              </div>
+
+              <p>Honda Vario • BL 4567 CD</p>
+
+              <small> 03 Oktober 2026 • 13:00 WIB </small>
+            </div>
+
+            <button onclick="showPage('detail')">Detail →</button>
+          </div>
+
+          <div class="history-item">
+            <div class="history-icon green-icon">✓</div>
+
+            <div class="history-main">
+              <div class="history-title">
+                <h3>Tune Up</h3>
+                <span class="badge done">Selesai</span>
+              </div>
+
+              <p>Honda Brio • BL 7890 EF</p>
+
+              <small> 28 September 2026 • 09:00 WIB </small>
+            </div>
+
+            <button onclick="showPage('detail')">Detail →</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= ADMIN ================= -->
+      <section id="admin" class="page">
+        <div class="page-title">
+          <span>ADMIN DASHBOARD</span>
+
+          <h1>Overview AutoCare</h1>
+
+          <p>Pantau aktivitas booking dan operasional bengkel.</p>
+        </div>
+
+        <div class="dashboard-stats">
+          <div class="dash-card">
+            <div class="dash-icon blue">▣</div>
+            <small>Total Booking</small>
+            <strong>128</strong>
+            <span>↑ 12% bulan ini</span>
+          </div>
+
+          <div class="dash-card">
+            <div class="dash-icon orange">◷</div>
+            <small>Menunggu</small>
+            <strong>08</strong>
+            <span>Perlu dikonfirmasi</span>
+          </div>
+
+          <div class="dash-card">
+            <div class="dash-icon purple">⚙</div>
+            <small>Diproses</small>
+            <strong>07</strong>
+            <span>Sedang dikerjakan</span>
+          </div>
+
+          <div class="dash-card">
+            <div class="dash-icon green">✓</div>
+            <small>Selesai</small>
+            <strong>113</strong>
+            <span>Servis selesai</span>
+          </div>
+        </div>
+
+        <div class="admin-panel">
+          <div class="panel-head">
+            <div>
+              <span>BOOKING TERBARU</span>
+              <h2>Daftar Booking</h2>
+            </div>
+
+            <button onclick="showPage('paket')">Kelola Paket →</button>
+          </div>
+
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Pelanggan</th>
+                  <th>Kendaraan</th>
+                  <th>Layanan</th>
+                  <th>Jadwal</th>
+                  <th>Status</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td><b>#AC001</b></td>
+
+                  <td>
+                    <div class="customer">
+                      <div class="table-avatar">A</div>
+                      Andi
+                    </div>
+                  </td>
+
+                  <td>Toyota Avanza</td>
+
+                  <td>Servis Ringan</td>
+
+                  <td>05 Okt<br /><small>10:00</small></td>
+
+                  <td>
+                    <span class="badge pending"> Pending </span>
+                  </td>
+
+                  <td>
+                    <button class="table-btn" onclick="approveBooking(this)">Setujui</button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td><b>#AC002</b></td>
+
+                  <td>
+                    <div class="customer">
+                      <div class="table-avatar">R</div>
+                      Rizky
+                    </div>
+                  </td>
+
+                  <td>Honda Vario</td>
+
+                  <td>Ganti Oli</td>
+
+                  <td>03 Okt<br /><small>13:00</small></td>
+
+                  <td>
+                    <span class="badge process"> Diproses </span>
+                  </td>
+
+                  <td>
+                    <button class="table-btn" onclick="showPage('detail')">Detail</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= PAKET ================= -->
+      <section id="paket" class="page">
+        <div class="page-title">
+          <span>MANAGEMENT</span>
+
+          <h1>Kelola Paket Servis</h1>
+
+          <p>Kelola jenis layanan, harga, dan estimasi waktu servis.</p>
+        </div>
+
+        <div class="management-head">
+          <div>
+            <h2>Daftar Paket</h2>
+            <p>4 paket servis tersedia</p>
+          </div>
+
+          <button class="btn-main" onclick="addPackage()">+ Tambah Paket</button>
+        </div>
+
+        <div class="package-table">
+          <table id="packageTable">
+            <thead>
+              <tr>
+                <th>NO</th>
+                <th>PAKET SERVIS</th>
+                <th>HARGA</th>
+                <th>ESTIMASI</th>
+                <th>STATUS</th>
+                <th>AKSI</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>01</td>
+
+                <td>
+                  <b>Servis Ringan</b>
+                  <small>Pemeriksaan dasar kendaraan</small>
+                </td>
+
+                <td><b>Rp150.000</b></td>
+
+                <td>± 1 Jam</td>
+
+                <td>
+                  <span class="badge done">Aktif</span>
+                </td>
+
+                <td>
+                  <button class="edit-btn" onclick="editPackage(this)">Edit</button>
+
+                  <button class="delete-btn" onclick="deletePackage(this)">Hapus</button>
+                </td>
+              </tr>
+
+              <tr>
+                <td>02</td>
+
+                <td>
+                  <b>Servis Lengkap</b>
+                  <small>Pemeriksaan menyeluruh</small>
+                </td>
+
+                <td><b>Rp350.000</b></td>
+
+                <td>± 2 Jam</td>
+
+                <td>
+                  <span class="badge done">Aktif</span>
+                </td>
+
+                <td>
+                  <button class="edit-btn" onclick="editPackage(this)">Edit</button>
+
+                  <button class="delete-btn" onclick="deletePackage(this)">Hapus</button>
+                </td>
+              </tr>
+
+              <tr>
+                <td>03</td>
+
+                <td>
+                  <b>Ganti Oli</b>
+                  <small>Penggantian oli mesin</small>
+                </td>
+
+                <td><b>Rp100.000</b></td>
+
+                <td>± 30 Menit</td>
+
+                <td>
+                  <span class="badge done">Aktif</span>
+                </td>
+
+                <td>
+                  <button class="edit-btn" onclick="editPackage(this)">Edit</button>
+
+                  <button class="delete-btn" onclick="deletePackage(this)">Hapus</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ================= MEKANIK ================= -->
+      <section id="mekanik" class="page">
+        <div class="page-title">
+          <span>MECHANIC WORKSPACE</span>
+
+          <h1>Dashboard Mekanik</h1>
+
+          <p>Kelola pekerjaan servis kendaraan pelanggan.</p>
+        </div>
+
+        <div class="mechanic-profile">
+          <div class="mechanic-avatar">R</div>
+
+          <div>
+            <small>MEKANIK AKTIF</small>
+            <h2>Ferdi alfata</h2>
+            <p>Senior Mechanic • AutoCare Service Center</p>
+          </div>
+
+          <div class="mechanic-status"><span></span> Online</div>
+        </div>
+
+        <div class="dashboard-stats">
+          <div class="dash-card">
+            <div class="dash-icon blue">▣</div>
+            <small>Servis Hari Ini</small>
+            <strong>06</strong>
+            <span>Jadwal hari ini</span>
+          </div>
+
+          <div class="dash-card">
+            <div class="dash-icon orange">◷</div>
+            <small>Menunggu</small>
+            <strong>02</strong>
+            <span>Belum dikerjakan</span>
+          </div>
+
+          <div class="dash-card">
+            <div class="dash-icon purple">⚙</div>
+            <small>Dikerjakan</small>
+            <strong>02</strong>
+            <span>Sedang berjalan</span>
+          </div>
+
+          <div class="dash-card">
+            <div class="dash-icon green">✓</div>
+            <small>Selesai</small>
+            <strong>02</strong>
+            <span>Hari ini</span>
+          </div>
+        </div>
+
+        <div class="admin-panel">
+          <div class="panel-head">
+            <div>
+              <span>TASK HARI INI</span>
+              <h2>Pekerjaan Servis</h2>
+            </div>
+          </div>
+
+          <div class="mechanic-task">
+            <div class="task-time">
+              <strong>09:00</strong>
+              <small>WIB</small>
+            </div>
+
+            <div class="task-info">
+              <h3>Toyota Avanza</h3>
+              <p>BL 1234 AB • Andi Saputra</p>
+              <span>Servis Ringan</span>
+            </div>
+
+            <span class="badge pending">Menunggu</span>
+
+            <button class="table-btn" onclick="startService(this)">Mulai Servis</button>
+          </div>
+
+          <div class="mechanic-task">
+            <div class="task-time">
+              <strong>10:00</strong>
+              <small>WIB</small>
+            </div>
+
+            <div class="task-info">
+              <h3>Honda Vario</h3>
+              <p>BL 4567 CD • Rizky</p>
+              <span>Ganti Oli</span>
+            </div>
+
+            <span class="badge process">Diproses</span>
+
+            <button class="table-btn" onclick="finishService(this)">Selesaikan</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= DETAIL ================= -->
+      <section id="detail" class="page">
+        <div class="detail-top">
+          <button onclick="showPage('riwayat')" class="back-button">← Kembali</button>
+
+          <span class="badge process"> Sedang Diproses </span>
+        </div>
+
+        <div class="page-title left">
+          <span>BOOKING #AC001</span>
+
+          <h1>Detail Servis Kendaraan</h1>
+
+          <p>Informasi lengkap mengenai booking dan pekerjaan mekanik.</p>
+        </div>
+
+        <div class="detail-grid">
+          <div class="detail-card">
+            <div class="detail-card-head">
+              <div class="detail-icon">👤</div>
+              <h3>Pelanggan</h3>
+            </div>
+
+            <div class="detail-row">
+              <span>Nama</span>
+              <b>Andi Saputra</b>
+            </div>
+
+            <div class="detail-row">
+              <span>No. HP</span>
+              <b>0812-3456-7890</b>
+            </div>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-card-head">
+              <div class="detail-icon">🚗</div>
+              <h3>Kendaraan</h3>
+            </div>
+
+            <div class="detail-row">
+              <span>Merk</span>
+              <b>Toyota Avanza</b>
+            </div>
+
+            <div class="detail-row">
+              <span>Plat Nomor</span>
+              <b>BL 1234 AB</b>
+            </div>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-card-head">
+              <div class="detail-icon">📅</div>
+              <h3>Jadwal</h3>
+            </div>
+
+            <div class="detail-row">
+              <span>Tanggal</span>
+              <b>05 Oktober 2026</b>
+            </div>
+
+            <div class="detail-row">
+              <span>Jam</span>
+              <b>10:00 WIB</b>
+            </div>
+          </div>
+
+          <div class="detail-card">
+            <div class="detail-card-head">
+              <div class="detail-icon">🔧</div>
+              <h3>Servis</h3>
+            </div>
+
+            <div class="detail-row">
+              <span>Layanan</span>
+              <b>Servis Ringan</b>
+            </div>
+
+            <div class="detail-row">
+              <span>Mekanik</span>
+              <b>Rian Pratama</b>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-card">
+          <div class="timeline-head">
+            <div>
+              <span>PROGRESS</span>
+              <h2>Status Servis</h2>
+            </div>
+
+            <strong>67%</strong>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline-item completed">
+              <div class="timeline-dot">✓</div>
+
+              <div>
+                <b>Booking Diterima</b>
+                <p>Booking telah dikonfirmasi oleh admin.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item completed">
+              <div class="timeline-dot">✓</div>
+
+              <div>
+                <b>Kendaraan Diproses</b>
+                <p>Mekanik sedang melakukan pemeriksaan kendaraan.</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot">3</div>
+
+              <div>
+                <b>Servis Selesai</b>
+                <p>Kendaraan siap diambil setelah servis selesai.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="note-card">
+          <div class="note-icon">!</div>
+
+          <div>
+            <small>CATATAN MEKANIK</small>
+
+            <p>Kendaraan dalam kondisi cukup baik. Oli perlu diganti dan dilakukan pemeriksaan rutin pada sistem pengereman.</p>
+          </div>
+        </div>
+
+        <div class="detail-actions">
+          <button class="btn-main" onclick="serviceStarted()">Mulai Servis</button>
+
+          <button class="btn-success" onclick="serviceFinished()">Selesaikan Servis</button>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer>
+        <div class="footer-brand">
+          <div class="brand-icon">A</div>
+
+          <div>
+            <h2>Auto<span>Care</span></h2>
+            <p>Smart vehicle service management.</p>
+          </div>
+        </div>
+
+        <p>© 2026 AutoCare Service Center</p>
+      </footer>
+    </main>
+
+    <div id="toast" class="toast">
+      <span>✓</span>
+      <p id="toastText">Berhasil!</p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
